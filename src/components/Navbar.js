@@ -12,22 +12,8 @@ export class Navbar extends Component {
       <div>
         <nav className="navbar">
           <div className="container">
-            <h1 className="logo">ABDYRASUL</h1>
-            <div className="mainNavbar">
-              <ul className="nav">
-                <li>
-                  <a href="#home">Home</a>
-                </li>
-                <li>
-                  <a href="#home">Blog</a>
-                </li>
-                <li>
-                  <a href="#home">Photography</a>
-                </li>
-                <li>
-                  <a href="#home">Portfolio</a>
-                </li>
-              </ul>
+            <div className="logoHeader">
+              <h1 className="logo">ABDYRASUL</h1>
               <ul className="rightMenu">
                 <li>
                   <a href="#">
@@ -39,8 +25,28 @@ export class Navbar extends Component {
                     <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
                   </a>
                 </li>
+                <li>
+                  <a href="#">
+                    <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+                  </a>
+                </li>
               </ul>
             </div>
+
+            <ul className="nav">
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#home">Blog</a>
+              </li>
+              <li>
+                <a href="#home">Photography</a>
+              </li>
+              <li>
+                <a href="#home">Portfolio</a>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
