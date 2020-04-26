@@ -5,6 +5,7 @@ import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "typeface-roboto";
 export class Navbar extends Component {
   // const element = <FontAwesomeIcon icon={faCoffee} />
   render() {

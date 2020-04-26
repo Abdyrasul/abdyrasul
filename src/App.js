@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 // import "./style.css";
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Navbar></Navbar>
+        <Home></Home>
       </div>
     );
   }
