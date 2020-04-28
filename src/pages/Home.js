@@ -6,8 +6,7 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        <Header selectedPage="HOME"></Header>
-        <Footer></Footer>
+        <h6>Home</h6>
       </div>
     );
   }
