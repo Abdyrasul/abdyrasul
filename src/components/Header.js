@@ -11,14 +11,19 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { MemoryRouter as Router } from "react-router";
+// import { Router, MemoryRouter} from "react-router";
 import { Link as RouterLink } from "react-router-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Photography from "../pages/Photography/Photography";
+import Portfolio from "../pages/Portfolio/Portfolio";
+import Blog from "../pages/Blog/Blog";
+import Home from "../pages/Home/Home";
 import "../style/style2.css";
 
-const LinkBehavior = React.forwardRef((props, ref) => (
-  <RouterLink ref={ref} to="/blogs" {...props} />
-));
+// const LinkBehavior = React.forwardRef((props, ref) => (
+//   <RouterLink ref={ref} to="/blogs" {...props} />
+// ));
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -32,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
   toolbarSecondary: {
     justifyContent: "space-between",
     overflowX: "auto",
+    width: "80%",
+    margin: "auto",
+    // paddingBottom:"30px"
   },
   toolbarLink: {
     padding: theme.spacing(1),
@@ -53,9 +61,26 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Header(props) {
-  const [SelectedPage, setSelectedPage] = useState(props.selectedPage);
+  const [SelectedPage, setSelectedPage] = useState('HOME');
   const classes = useStyles();
-  const sections = ["HOME", "PHOTOGRAPHY", "BLOG", "PORTFOLIO"];
+  // const sections = ["HOME", "PHOTOGRAPHY", "BLOG", "PORTFOLIO"];
+  const sections = [
+    {
+    name:"HOME",
+    url:'/',
+  },
+  {
+    name:"PHOTOGRAPHY",
+    url:'/photo',
+  },
+  {
+    name:"BLOG",
+    url:'/blogs',
+  },
+  {
+    name:"PORTFOLIO",
+    url:'/portfolio',
+  }];
 
   // function clickedEvent = ()=> {
 
@@ -64,15 +89,16 @@ export default function Header(props) {
   return (
     <Router>
       <React.Fragment>
+        
         <Toolbar className={classes.toolbar}>
           <a href="https://www.instagram.com/abdiresul/">
-            <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faInstagram} size="lg"></FontAwesomeIcon>
           </a>
           <a href="https://www.linkedin.com/in/abdyrasul-oraznyyazov-245933121/">
-            <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faLinkedin} size="lg"></FontAwesomeIcon>
           </a>
           <a href="#">
-            <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faGithub} size="lg"></FontAwesomeIcon>
           </a>
           <Typography
             component="h2"
@@ -96,28 +122,35 @@ export default function Header(props) {
           {sections.map((item) => (
             <Link
               component={RouterLink}
-              to={`/`}
+              to={item.url}
               color="inherit"
               noWrap
-              key={item}
+              key={item.name}
               variant="button"
               href="#"
               underline="none"
               onClick={() => {
-                setSelectedPage(item);
+                setSelectedPage(item.name);
               }}
               className={
-                SelectedPage === item
+                SelectedPage === item.name
                   ? classes.selectedPage
                   : classes.toolbarLink
               }
             >
-              {item}
+              {item.name}
             </Link>
           ))}
         </Toolbar>
+        <Switch>
+            <Route path="/" exact component={Home}></Route>
+            <Route path="/photo" component={Photography}></Route>
+            <Route path="/blogs" component={Blog}></Route>
+            <Route path="/portfolio" component={Portfolio}></Route>
+          </Switch>
       </React.Fragment>
-    </Router>
+      </Router>
+    
   );
 }
 Header.propTypes = {
