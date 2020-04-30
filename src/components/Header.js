@@ -39,8 +39,15 @@ const useStyles = makeStyles((theme) => ({
     overflowX: "auto",
     width: "80%",
     margin: "auto",
+    marginBottom:20,
+    [theme.breakpoints.down('xs')]:{
+      width:"100%",
+      // backgroundColor:"#FFDFDC",
+      margin:0,
+      padding:0,
     // paddingBottom:"30px"
   },
+},
   toolbarLink: {
     padding: theme.spacing(1),
     flexShrink: 0,
