@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/abdiresul.com/static/css/main.7dc514c2.chunk.css",
+    "main.js": "/abdiresul.com/static/js/main.3c4f026c.chunk.js",
+    "main.js.map": "/abdiresul.com/static/js/main.3c4f026c.chunk.js.map",
+    "runtime-main.js": "/abdiresul.com/static/js/runtime-main.86300741.js",
+    "runtime-main.js.map": "/abdiresul.com/static/js/runtime-main.86300741.js.map",
+    "static/css/2.175a34c7.chunk.css": "/abdiresul.com/static/css/2.175a34c7.chunk.css",
+    "static/js/2.d5923e71.chunk.js": "/abdiresul.com/static/js/2.d5923e71.chunk.js",
+    "static/js/2.d5923e71.chunk.js.map": "/abdiresul.com/static/js/2.d5923e71.chunk.js.map",
+    "index.html": "/abdiresul.com/index.html",
+    "precache-manifest.69c79e9383cf9fa988e6ec1fc148b39a.js": "/abdiresul.com/precache-manifest.69c79e9383cf9fa988e6ec1fc148b39a.js",
+    "service-worker.js": "/abdiresul.com/service-worker.js",
+    "static/css/2.175a34c7.chunk.css.map": "/abdiresul.com/static/css/2.175a34c7.chunk.css.map",
+    "static/css/main.7dc514c2.chunk.css.map": "/abdiresul.com/static/css/main.7dc514c2.chunk.css.map",
+    "static/js/2.d5923e71.chunk.js.LICENSE.txt": "/abdiresul.com/static/js/2.d5923e71.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/abdiresul.com/static/media/roboto-latin-900italic.ebf6d164.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86300741.js",
+    "static/css/2.175a34c7.chunk.css",
+    "static/js/2.d5923e71.chunk.js",
+    "static/css/main.7dc514c2.chunk.css",
+    "static/js/main.3c4f026c.chunk.js"
+  ]
+}
