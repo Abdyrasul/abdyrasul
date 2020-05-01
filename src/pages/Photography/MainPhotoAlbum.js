@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) =>({
       image: {
         position: 'relative',
         height: 200,
+        borderRadius:15,
         [theme.breakpoints.down('xs')]: {
           width: '100% !important', // Overrides inline-style
           height: 100,
@@ -73,6 +74,7 @@ const useStyles = makeStyles((theme) =>({
         bottom: 0,
         backgroundSize: 'cover',
         backgroundPosition: 'center 40%',
+        borderRadius:15
       },
       imageBackdrop: {
         position: 'absolute',
