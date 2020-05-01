@@ -10,7 +10,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import ButtonBase from '@material-ui/core/ButtonBase';
-
+import AlbumItem from "./AlbumItem";
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) =>({
     root: {
@@ -37,7 +38,7 @@ const useStyles = makeStyles((theme) =>({
         borderRadius:15,
         [theme.breakpoints.down('xs')]: {
           width: '100% !important', // Overrides inline-style
-          height: 100,
+          height: 140,
         },
         '&:hover, &$focusVisible': {
           zIndex: 1,
@@ -100,7 +101,7 @@ export default function MainPhotoAlbum(props) {
     return (
         <Grid item xs={12} sm={6} md={4}>
         <Card className={classes.root}>
-        <CardActionArea component="a" href="#">
+        <CardActionArea component={Link} to={`/photo/${album.title}`}>
             
 
           <CardMedia

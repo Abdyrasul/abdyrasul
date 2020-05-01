@@ -7,13 +7,18 @@ import Container from "@material-ui/core/Container"
 
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) =>({
   root: {
     // flexGrow: 2,
     justifyContent:"center",
     width:"80%",
     margin: "auto",
     overflowX: "auto",
+    [theme.breakpoints.down('xs')]:{
+      width:"95%",
+      // margin:0,
+      // padding:0,
+  },
   },
   header:{
     fontSize:30
@@ -22,7 +27,7 @@ const useStyles = makeStyles({
   container:{
     // backgroundColor:'grey'
   }
-})
+}))
 const albums = [{
   title:"Ashgabat",
   img:"https://1.bp.blogspot.com/-KOzmmj2YBtU/XTRhkwi8s3I/AAAAAAAAh8s/maLMA0OMF2sjHJGfWqve7pAS4nwzQi0ewCKgBGAs/s640/Ashgabat-Walking-Tour-98.jpg",
@@ -50,14 +55,14 @@ export default function Photography(props) {
  const classes = useStyles();
   return (
     
-      <Container>
+      <div>
     <Typography align="center" className={classes.header}> ALBUMS </Typography>
     <Grid container spacing={4} className = {classes.root}>
       {albums.map((item)=>(
         <MainPhotoAlbum album={item}></MainPhotoAlbum>
       ))}
   </Grid>
-  </Container>
+  </div>
  
   );
 }

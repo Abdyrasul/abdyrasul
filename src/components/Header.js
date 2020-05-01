@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { Router, MemoryRouter} from "react-router";
 import { Link as RouterLink } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AlbumItem from "../pages/Photography/AlbumItem"
 
 import Photography from "../pages/Photography/Photography";
 import Portfolio from "../pages/Portfolio/Portfolio";
@@ -151,9 +152,10 @@ export default function Header(props) {
         </Toolbar>
         <Switch>
             <Route path="/" exact component={Home}></Route>
-            <Route path="/photo" component={Photography}></Route>
+            <Route path="/photo"  exact component={Photography}></Route>
             <Route path="/blogs" component={Blog}></Route>
             <Route path="/portfolio" component={Portfolio}></Route>
+            <Route path="/photo/:id" component={AlbumItem}></Route>
           </Switch>
       </React.Fragment>
       </Router>
