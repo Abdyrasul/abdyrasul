@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -7,14 +7,13 @@ import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import "typeface-roboto";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 // import { Router, MemoryRouter} from "react-router";
 import { Link as RouterLink } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import AlbumItem from "../pages/Photography/AlbumItem"
+import AlbumItem from "../pages/Photography/AlbumItem";
 
 import Photography from "../pages/Photography/Photography";
 import Portfolio from "../pages/Portfolio/Portfolio";
@@ -40,15 +39,15 @@ const useStyles = makeStyles((theme) => ({
     overflowX: "auto",
     width: "80%",
     margin: "auto",
-    marginBottom:20,
-    [theme.breakpoints.down('xs')]:{
-      width:"100%",
+    marginBottom: 20,
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
       // backgroundColor:"#FFDFDC",
-      margin:0,
-      padding:0,
-    // paddingBottom:"30px"
+      margin: 0,
+      padding: 0,
+      // paddingBottom:"30px"
+    },
   },
-},
   toolbarLink: {
     padding: theme.spacing(1),
     flexShrink: 0,
@@ -69,26 +68,27 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Header(props) {
-  const [SelectedPage, setSelectedPage] = useState('HOME');
+  const [SelectedPage, setSelectedPage] = useState("HOME");
   const classes = useStyles();
   // const sections = ["HOME", "PHOTOGRAPHY", "BLOG", "PORTFOLIO"];
   const sections = [
     {
-    name:"HOME",
-    url:'/',
-  },
-  {
-    name:"PHOTOGRAPHY",
-    url:'/photo',
-  },
-  {
-    name:"BLOG",
-    url:'/blogs',
-  },
-  {
-    name:"PORTFOLIO",
-    url:'/portfolio',
-  }];
+      name: "HOME",
+      url: "/",
+    },
+    {
+      name: "PHOTOGRAPHY",
+      url: "/photo",
+    },
+    {
+      name: "BLOG",
+      url: "/blogs",
+    },
+    {
+      name: "PORTFOLIO",
+      url: "/portfolio",
+    },
+  ];
 
   // function clickedEvent = ()=> {
 
@@ -97,16 +97,15 @@ export default function Header(props) {
   return (
     <Router>
       <React.Fragment>
-        
         <Toolbar className={classes.toolbar}>
           <a href="https://www.instagram.com/abdiresul/">
-            <FontAwesomeIcon icon={faInstagram} size="lg"></FontAwesomeIcon>
+            <InstagramIcon color="primary"></InstagramIcon>
           </a>
           <a href="https://www.linkedin.com/in/abdyrasul-oraznyyazov-245933121/">
-            <FontAwesomeIcon icon={faLinkedin} size="lg"></FontAwesomeIcon>
+            <LinkedInIcon color="primary"></LinkedInIcon>
           </a>
-          <a href="#">
-            <FontAwesomeIcon icon={faGithub} size="lg"></FontAwesomeIcon>
+          <a href="https://github.com/Abdyrasul/">
+            <GitHubIcon color="primary"></GitHubIcon>
           </a>
           <Typography
             component="h2"
@@ -151,15 +150,14 @@ export default function Header(props) {
           ))}
         </Toolbar>
         <Switch>
-            <Route path="/" exact component={Home}></Route>
-            <Route path="/photo"  exact component={Photography}></Route>
-            <Route path="/blogs" component={Blog}></Route>
-            <Route path="/portfolio" component={Portfolio}></Route>
-            <Route path="/photo/:id" component={AlbumItem}></Route>
-          </Switch>
+          <Route path="/" exact component={Home}></Route>
+          <Route path="/photo" exact component={Photography}></Route>
+          <Route path="/blogs" component={Blog}></Route>
+          <Route path="/portfolio" component={Portfolio}></Route>
+          <Route path="/photo/:id" component={AlbumItem}></Route>
+        </Switch>
       </React.Fragment>
-      </Router>
-    
+    </Router>
   );
 }
 Header.propTypes = {
