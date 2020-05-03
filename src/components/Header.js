@@ -43,8 +43,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       width: "100%",
       // backgroundColor:"#FFDFDC",
-      margin: 0,
-      padding: 0,
       // paddingBottom:"30px"
     },
   },
