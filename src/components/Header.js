@@ -14,6 +14,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Link as RouterLink } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AlbumItem from "../pages/Photography/AlbumItem";
+import BlogItem from "../pages/Blog/BlogItem";
 
 import Photography from "../pages/Photography/Photography";
 import Portfolio from "../pages/Portfolio/Portfolio";
@@ -153,6 +154,7 @@ export default function Header(props) {
           <Route path="/blogs" component={Blog}></Route>
           <Route path="/portfolio" component={Portfolio}></Route>
           <Route path="/photo/:id" component={AlbumItem}></Route>
+          <Route path="/blog/:id" component={BlogItem}></Route>
         </Switch>
       </React.Fragment>
     </Router>

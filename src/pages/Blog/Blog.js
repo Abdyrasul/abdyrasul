@@ -1,6 +1,7 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
+import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid";
 import FeaturedPost from "./FeaturedPost";
 import { makeStyles } from "@material-ui/core/styles";
@@ -13,10 +14,19 @@ const useStyles = makeStyles((theme) => ({
       width: "100% !important", // Overrides inline-style
     },
   },
+  headerImage:{
+    backgroundImage: 'url(https://cdn.pixabay.com/photo/2016/02/19/11/25/business-1209705_1280.jpg)',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center center',
+    backgroundSize:"cover",
+    height:250,
+    marginBottom:10,
+  }
 }));
 
 const featuredPosts = [
   {
+    id:1,
     title: "Featured post",
     date: "Nov 12",
     description:
@@ -26,6 +36,7 @@ const featuredPosts = [
     linkText: "Continue reading…",
   },
   {
+    id:2,
     title: "Title of a longer featured blog post",
     date: "Nov 11",
     description:
@@ -35,6 +46,7 @@ const featuredPosts = [
     linkText: "Continue reading…",
   },
   {
+    id:3,
     title: "Post title",
     date: "Nov 11",
     description:
@@ -51,6 +63,9 @@ export default function Blog() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="xl" className={classes.root}>
+        <Paper className={classes.headerImage}  style={{ backgroundImage: `url(https://cdn.pixabay.com/photo/2016/02/19/11/25/business-1209705_1280.jpg)` }}>
+
+        </Paper>
         <Grid
           container
           spacing={3}
