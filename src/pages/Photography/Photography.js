@@ -56,7 +56,7 @@ export default function Photography(props) {
   return (
     
       <div>
-    <Typography align="center" className={classes.header}> ALBUMS </Typography>
+    <Typography align="center" className={classes.header}> Albums </Typography>
     <Grid container spacing={4} className = {classes.root}>
       {albums.map((item)=>(
         <MainPhotoAlbum album={item}></MainPhotoAlbum>
