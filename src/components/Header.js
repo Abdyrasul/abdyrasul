@@ -54,6 +54,9 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.secondary.main,
       // borderBottom: `2px solid ${theme.palette.success.dark}`,
     },
+    [theme.breakpoints.down("xs")]: {
+      fontSize:13
+    },
   },
 
   selectedPage: {
@@ -63,7 +66,17 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       color: theme.palette.secondary.main,
     },
+    [theme.breakpoints.down("xs")]: {
+      fontSize:13
+    },
   },
+  socialIcons:{
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 17
+      // backgroundColor:"#FFDFDC",
+      // paddingBottom:"30px"
+    },
+  }
 }));
 
 export default function Header(props) {
@@ -98,13 +111,13 @@ export default function Header(props) {
       <React.Fragment>
         <Toolbar className={classes.toolbar}>
           <a href="https://www.instagram.com/abdiresul/">
-            <InstagramIcon color="primary"></InstagramIcon>
+            <InstagramIcon className = {classes.socialIcons} color="primary"></InstagramIcon>
           </a>
           <a href="https://www.linkedin.com/in/abdyrasul-oraznyyazov-245933121/">
-            <LinkedInIcon color="primary"></LinkedInIcon>
+            <LinkedInIcon className = {classes.socialIcons} color="primary"></LinkedInIcon>
           </a>
           <a href="https://github.com/Abdyrasul/">
-            <GitHubIcon color="primary"></GitHubIcon>
+            <GitHubIcon  className = {classes.socialIcons} color="primary"></GitHubIcon>
           </a>
           <Typography
             component="h2"

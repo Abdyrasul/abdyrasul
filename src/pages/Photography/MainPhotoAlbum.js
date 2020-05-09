@@ -72,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 15,
   },
   imageBackdrop: {
+    borderRadius: 15,
     position: "absolute",
     left: 0,
     right: 0,

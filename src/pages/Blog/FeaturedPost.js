@@ -45,9 +45,8 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     width: theme.spacing(3),
     height: theme.spacing(3),
-    color: theme.palette.getContrastText(deepOrange[500]),
-    backgroundColor: deepOrange[500],
-    margin: 5,
+    marginRight: 10,
+    alignContent:"center"
   },
 }));
 
@@ -69,7 +68,16 @@ export default function FeaturedPost(props) {
               <Typography variant="subtitle1" paragraph>
                 {post.description}
               </Typography>
-              <Avatar className={classes.avatar}>A</Avatar>
+              <Box display = "flex" flexDirection="row">
+                <Box alignSelf="center">
+                <Avatar className={classes.avatar} src ={post.avatarPhoto}></Avatar>
+                </Box>
+              
+              <Typography component = "h3" variant="h6">
+       {post.author}
+        </Typography>
+              </Box>
+              
               <Typography variant="subtitle1" color="primary">
                 Continue reading...
               </Typography>
