@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 export default function FeaturedWorks() {
     const classes = useStyles();
     return (
-        <Paper className={classes.aboutMe} style ={{height:150,backgroundImage: 'url(https://images.unsplash.com/photo-1523395409694-e6279211b027?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)',}}>
+        <Paper className={classes.aboutMe} style ={{height:200,backgroundImage: 'url(https://images.unsplash.com/photo-1513708929605-6dd0e1b081bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80)',}}>
           <div className={classes.overlay} />
           <Grid container>
         <Grid item md={6}>

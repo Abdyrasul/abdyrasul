@@ -17,7 +17,7 @@ aboutMe:{
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        height: 150,
+        height: 200,
       },
       aboutMeContent:{
         // color: theme.palette.common.black,
