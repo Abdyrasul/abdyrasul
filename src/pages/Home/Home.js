@@ -7,6 +7,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from '@material-ui/core/Box';
 import Grid from "@material-ui/core/Grid"
 import CardMedia from "@material-ui/core/CardMedia";
+import Link from "@material-ui/core/Link"
+import Button from "@material-ui/core/Button"
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import CardActionArea from "@material-ui/core/CardActionArea"
+import AboutMe from "./AboutMe"
+import FeaturedWorks from "./FeaturedWorks"
+import Contact from "./Contact"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,18 +24,7 @@ const useStyles = makeStyles((theme) => ({
       width: "100% !important", // Overrides inline-style
     },
   },
-  headerImage:{
-    position: 'relative',
-    // backgroundColor: theme.palette.grey[800],
-    color: theme.palette.common.white,
-    marginBottom: theme.spacing(4),
-    backgroundImage: 'url(https://images.pexels.com/photos/916335/pexels-photo-916335.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    height:250,
-    backgroundColor: 'rgba(255,255,255,0.4)',
-  },
+ 
   personnelName:{
     fontSize: 30,
     textAlign:"center",
@@ -51,29 +48,11 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     backgroundSize: "cover",
     backgroundPosition: "center 40%",
-    borderRadius: 10,
+    // borderRadius: 10,
   },
   image: {
     position: "relative",
     height: 250,
-    borderRadius: 10,
-    [theme.breakpoints.down("xs")]: {
-      width: "100% !important", // Overrides inline-style
-      height: 140,
-    },
-    "&:hover, &$focusVisible": {
-      zIndex: 1,
-      "& $imageBackdrop": {
-        opacity: 0.15,
-      },
-      "& $imageMarked": {
-        opacity: 0,
-      },
-      "& $imageTitle": {
-        fontSize: 25,
-        // border: '4px solid currentColor',
-      },
-    },
   },
   imageButton: {
     position: "absolute",
@@ -92,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageBackdrop: {
     position: "absolute",
-    borderRadius: 10,
+    // borderRadius: 10,
     left: 0,
     right: 0,
     top: 0,
@@ -101,7 +80,19 @@ const useStyles = makeStyles((theme) => ({
     opacity: 0.4,
     transition: theme.transitions.create("opacity"),
   },
+  
+  gridList: {
+    width: "100%",
+    height: 450,
+  },
 
+media:{
+height:350,
+backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize:"100%",
+        objectFit:"stretch",
+}
 
 }));
 
@@ -139,16 +130,13 @@ export default function Home() {
               >
                 Welcome to my website.
               </Typography>
-              <Typography
-                component="span"
-                variant="subtitle1"
-                color="inherit"
-                className={classes.text}
-              >
-                I am a software developer from Istanbul.
-              </Typography>
+              
             </span>
           </CardMedia>
+    <AboutMe></AboutMe>
+    <FeaturedWorks></FeaturedWorks>
+     <Contact></Contact>     
+          
         </Container>
       </React.Fragment>
     );

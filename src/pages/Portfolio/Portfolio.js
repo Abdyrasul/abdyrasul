@@ -27,6 +27,7 @@ image:{
 
 export default function Portfolio() {
   const classes = useStyles();
+  console.log("Portfolio Syafasinda")
   return (
     <React.Fragment>
       <CssBaseline />

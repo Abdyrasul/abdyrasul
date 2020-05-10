@@ -21,6 +21,7 @@ import Portfolio from "../pages/Portfolio/Portfolio";
 import Blog from "../pages/Blog/Blog";
 import Home from "../pages/Home/Home";
 import "../style/style2.css";
+import { useLocation } from 'react-router-dom'
 
 // const LinkBehavior = React.forwardRef((props, ref) => (
 //   <RouterLink ref={ref} to="/blogs" {...props} />
@@ -107,6 +108,7 @@ export default function Header(props) {
   //   console.log("Clicked");
   // }
   return (
+    
     <Router>
       <React.Fragment>
         <Toolbar className={classes.toolbar}>
@@ -162,7 +164,8 @@ export default function Header(props) {
           ))}
         </Toolbar>
         <Switch>
-          <Route path="/" exact component={Home}></Route>
+          <Route path={"/"} exact component={Home}></Route>
+          <Route path={"/abdyrasul"} exact component={Home}></Route>
           <Route path="/photo" exact component={Photography}></Route>
           <Route path="/blogs" component={Blog}></Route>
           <Route path="/portfolio" component={Portfolio}></Route>
