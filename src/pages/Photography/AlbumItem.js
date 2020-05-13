@@ -4,6 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 // import CardMedia from "@material-ui/core/CardMedia";
 // import Card from "@material-ui/core/Card";
@@ -78,7 +80,10 @@ function AlbumItem(props) {
       .catch((err) => console.log(err));
   }, [term]);
   return (
+    <React.Fragment>
+    <Header name ="PHOTOGRAPHY"></Header>
     <Container>
+
       {!isLoading && images.length === 0 && <h1>No Images Found</h1>}
       <div className={classes.root}>
         <GridList className={classes.gridList} cols={getGridListCols()}>
@@ -94,6 +99,8 @@ function AlbumItem(props) {
         </GridList>
       </div>
     </Container>
+    <Footer></Footer>
+    </React.Fragment>
   );
 }
 export default withWidth()(AlbumItem);

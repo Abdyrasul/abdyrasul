@@ -2,19 +2,13 @@ import React, { Component } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import Paper from "@material-ui/core/Paper"
 import { makeStyles } from "@material-ui/core/styles";
-import Box from '@material-ui/core/Box';
-import Grid from "@material-ui/core/Grid"
 import CardMedia from "@material-ui/core/CardMedia";
-import Link from "@material-ui/core/Link"
-import Button from "@material-ui/core/Button"
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import CardActionArea from "@material-ui/core/CardActionArea"
 import AboutMe from "./AboutMe"
 import FeaturedWorks from "./FeaturedWorks"
 import Contact from "./Contact"
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -101,6 +95,7 @@ export default function Home() {
     return (
       <React.Fragment>
         <CssBaseline />
+        <Header name ="HOME"></Header>
         <Container maxWidth="xl" className={classes.root}>
         <CardMedia
             className={classes.image}
@@ -138,6 +133,7 @@ export default function Home() {
      <Contact></Contact>     
           
         </Container>
+        <Footer></Footer>
       </React.Fragment>
     );
 

@@ -3,6 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import MainPhotoAlbum from "./MainPhotoAlbum.js";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,6 +25,13 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     // backgroundColor:'grey'
+  },
+  div: {
+    marginTop: 5,
+    width: "80%",
+    [theme.breakpoints.down("xs")]: {
+      width: "100% !important", // Overrides inline-style
+    },
   },
 }));
 const albums = [
@@ -52,8 +62,10 @@ const albums = [
 export default function Photography(props) {
   const classes = useStyles();
   return (
-
-    <div>
+    <React.Fragment>
+      <CssBaseline />
+ <Header name ="PHOTOGRAPHY"></Header>
+ <div>
       <Typography align="center" className={classes.header}>
         {" "}
         GALLERY{" "}
@@ -63,6 +75,8 @@ export default function Photography(props) {
           <MainPhotoAlbum album={item}></MainPhotoAlbum>
         ))}
       </Grid>
-    </div>
+      </div>
+    <Footer></Footer>
+    </React.Fragment>
   );
 }

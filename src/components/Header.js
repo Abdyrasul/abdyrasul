@@ -10,22 +10,10 @@ import "typeface-roboto";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-// import { Router, MemoryRouter} from "react-router";
 import { Link as RouterLink } from "react-router-dom";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import AlbumItem from "../pages/Photography/AlbumItem";
-import BlogItem from "../pages/Blog/BlogItem";
 
-import Photography from "../pages/Photography/Photography";
-import Portfolio from "../pages/Portfolio/Portfolio";
-import Blog from "../pages/Blog/Blog";
-import Home from "../pages/Home/Home";
 import "../style/style2.css";
-import { useLocation } from 'react-router-dom'
 
-// const LinkBehavior = React.forwardRef((props, ref) => (
-//   <RouterLink ref={ref} to="/blogs" {...props} />
-// ));
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -81,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Header(props) {
-  const [SelectedPage, setSelectedPage] = useState("HOME");
+  const [SelectedPage, setSelectedPage] = useState(props.name);
   const classes = useStyles();
   // const sections = ["HOME", "PHOTOGRAPHY", "BLOG", "PORTFOLIO"];
   const sections = [
@@ -103,13 +91,8 @@ export default function Header(props) {
     },
   ];
 
-  // function clickedEvent = ()=> {
-
-  //   console.log("Clicked");
-  // }
   return (
     
-    <Router>
       <React.Fragment>
         <Toolbar className={classes.toolbar}>
           <a href="https://www.instagram.com/abdiresul/">
@@ -163,21 +146,12 @@ export default function Header(props) {
             </Link>
           ))}
         </Toolbar>
-        <Switch>
-          <Route path={"/"} exact component={Home}></Route>
-          <Route path={"/abdyrasul"} exact component={Home}></Route>
-          <Route path="/photo" exact component={Photography}></Route>
-          <Route path="/blogs" component={Blog}></Route>
-          <Route path="/portfolio" component={Portfolio}></Route>
-          <Route path="/photo/:id" component={AlbumItem}></Route>
-          <Route path="/blog/:id" component={BlogItem}></Route>
-        </Switch>
       </React.Fragment>
-    </Router>
   );
 }
 Header.propTypes = {
   sections: PropTypes.array,
   title: PropTypes.string,
   selectedPage: PropTypes.string,
+  name: PropTypes.string,
 };

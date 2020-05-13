@@ -1,11 +1,12 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
-import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid";
 import FeaturedPost from "./FeaturedPost";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -70,6 +71,7 @@ export default function Blog() {
   return (
     <React.Fragment>
       <CssBaseline />
+      <Header name ="BLOG"></Header>
       <Container maxWidth="xl" className={classes.root}>
         <Box className={classes.headerImage}  style={{ backgroundImage: `url(https://cdn.pixabay.com/photo/2016/02/19/11/25/business-1209705_1280.jpg)` }}>
 
@@ -86,6 +88,7 @@ export default function Blog() {
           ))}
         </Grid>
       </Container>
+      <Footer></Footer>
     </React.Fragment>
   );
 }

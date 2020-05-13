@@ -8,6 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100%",
@@ -95,6 +96,8 @@ export default function MainPhotoAlbum(props) {
   const classes = useStyles();
   const album = props.album;
   return (
+    <React.Fragment>
+      
     <Grid item xs={12} sm={6} md={4}>
       <Card className={classes.root}>
         <CardActionArea component={Link} to={`/photo/${album.title}`}>
@@ -143,5 +146,7 @@ export default function MainPhotoAlbum(props) {
         </CardActions> */}
       </Card>
     </Grid>
+    
+    </React.Fragment>
   );
 }

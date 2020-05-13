@@ -4,10 +4,9 @@ import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from '@material-ui/core/Box';
 import Typography from "@material-ui/core/Typography"
-import { deepOrange } from "@material-ui/core/colors";
 import Avatar from "@material-ui/core/Avatar";
-import Paper from "@material-ui/core/Paper"
-import ReactMarkdown from "react-markdown";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -72,6 +71,7 @@ export default function BlogItem() {
     return (
         <React.Fragment>
             <CssBaseline />
+            <Header name ="BLOG"></Header>
       <Container maxWidth="xl" className={classes.root}>
       <Box className={classes.headerImage}  >
 
@@ -98,6 +98,7 @@ export default function BlogItem() {
       </Box> 
       {/* <ReactMarkdown source ={`# This is a header\n\nAnd this is a paragraph`}/> */}
       </Container>
+      <Footer></Footer>
         </React.Fragment>
     )
 }
