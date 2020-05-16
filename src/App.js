@@ -7,8 +7,6 @@ import Portfolio from "./pages/Portfolio/Portfolio";
 import AlbumItem from "./pages/Photography/AlbumItem";
 import BlogItem from "./pages/Blog/BlogItem";
 
-// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import "./style.css";
 
 class App extends React.Component {
   render() {

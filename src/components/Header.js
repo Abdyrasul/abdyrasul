@@ -12,8 +12,6 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Link as RouterLink } from "react-router-dom";
 
-import "../style/style2.css";
-
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
