@@ -8,7 +8,6 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100%",
@@ -97,56 +96,54 @@ export default function MainPhotoAlbum(props) {
   const album = props.album;
   return (
     <React.Fragment>
-      
-    <Grid item xs={12} sm={6} md={4}>
-      <Card className={classes.root}>
-        <CardActionArea component={Link} to={`/photo/${album.title}`}>
-          <CardMedia
-            className={classes.image}
-            // image={album.img}
-            title={album.title}
-          >
-            <span
-              className={classes.imageSrc}
-              style={{
-                backgroundImage: `url(${album.img})`,
-              }}
-            />
-            <span className={classes.imageBackdrop} />
-            <span className={classes.imageButton}>
-              <Typography
-                component="span"
-                variant="subtitle1"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                {album.title}
-                {/* <span className={classes.imageMarked} /> */}
-              </Typography>
-            </span>
-          </CardMedia>
-          <CardContent className={classes.cardContent}>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {album.description}
-            </Typography>
-            <Typography
-              variant="body2"
-              color="primary"
-              align="right"
-              style={{ marginTop: 7 }}
+      <Grid item xs={12} sm={6} md={4}>
+        <Card className={classes.root}>
+          <CardActionArea component={Link} to={`/photo/${album.staticFolder}`}>
+            <CardMedia
+              className={classes.image}
+              // image={album.img}
+              title={album.title}
             >
-              100 views
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        {/* <CardActions>
+              <span
+                className={classes.imageSrc}
+                style={{
+                  backgroundImage: `url(${album.img})`,
+                }}
+              />
+              <span className={classes.imageBackdrop} />
+              <span className={classes.imageButton}>
+                <Typography
+                  component="span"
+                  variant="subtitle1"
+                  color="inherit"
+                  className={classes.imageTitle}
+                >
+                  {album.title}
+                  {/* <span className={classes.imageMarked} /> */}
+                </Typography>
+              </span>
+            </CardMedia>
+            <CardContent className={classes.cardContent}>
+              <Typography variant="body2" color="textSecondary" component="p">
+                {album.description}
+              </Typography>
+              {/* <Typography
+                variant="body2"
+                color="primary"
+                align="right"
+                style={{ marginTop: 7 }}
+              >
+                100 views
+              </Typography> */}
+            </CardContent>
+          </CardActionArea>
+          {/* <CardActions>
           <Button size="small" color="primary">
             Learn More
           </Button>
         </CardActions> */}
-      </Card>
-    </Grid>
-    
+        </Card>
+      </Grid>
     </React.Fragment>
   );
 }
