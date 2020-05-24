@@ -6,6 +6,9 @@ import GridListTile from "@material-ui/core/GridListTile";
 import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import Link from "@material-ui/core/Link";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardMedia from "@material-ui/core/CardMedia";
 
 // import CardMedia from "@material-ui/core/CardMedia";
 // import Card from "@material-ui/core/Card";
@@ -26,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
     // height: 450,
   },
   mainImage: {
-    backgroundSize: "cover",
+    // backgroundSize: "cover",
+    display: "inline-block",
   },
   media: {
     height: 200,
@@ -38,6 +42,10 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     maxWidth: 500,
+  },
+  media2: {
+    height: 200,
+    // paddingTop: "56.25%", // 16:9
   },
 }));
 
@@ -95,13 +103,13 @@ function AlbumItem(props) {
           <GridList className={classes.gridList} cols={getGridListCols()}>
             {images.map((url2, index) => (
               <GridListTile key={index} cols={1}>
-                {/* <a href="#"> */}
-                <img
-                  className={classes.mainImage}
-                  src={require(`./images/${url2}`)}
-                  alt={url2}
-                />
-                {/* </a> */}
+                <CardActionArea component={Link} to={`#`}>
+                  <CardMedia
+                    className={classes.media2}
+                    image={require(`./images/${url2}`)}
+                    title="Paella dish"
+                  />
+                </CardActionArea>
               </GridListTile>
             ))}
           </GridList>
