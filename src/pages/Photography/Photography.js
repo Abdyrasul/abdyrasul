@@ -47,8 +47,7 @@ const albums = [
   {
     title: "Moda Sahili",
     staticFolder: "moda",
-    img:
-      "https://lh3.googleusercontent.com/proxy/EF41CfMr4qRRoZF6_cpktwCSHb4-oQ0QsaI-qZa8JjKMpiLUN3xMz1ew6gu_s_MmGFAIhB1huo0E7nPnK2DVkeZ0IVf_zAtQpBXMzI6HeaFgJpZwOCtDDw",
+    img: "https://istanbeautiful.com/tr/wp-content/uploads/moda-kadikoy.jpg",
     description:
       "Moda park is located in the west of Kadıköy on the Anatolian coast, overlooking the Marmara Sea and Prince Islands, it is a famous district with its nature and frequent restaurants.",
     year: 2018,

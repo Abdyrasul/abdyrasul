@@ -8,7 +8,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import ReactMarkdown from "react-markdown";
-import "./style.css";
+import blogCSS from "./style.css";
 // import mdPost from "./posts/3.md";
 
 const useStyles = makeStyles((theme) => ({
@@ -109,7 +109,7 @@ export default function BlogItem(props) {
           {/* <Typography component="p" variant="body2" className={classes.content}>
             {blogItem.body}
           </Typography> */}
-          <ReactMarkdown source={post} />
+          <ReactMarkdown source={post} className={blogCSS} />
         </Box>
         {/* <ReactMarkdown source ={`# This is a header\n\nAnd this is a paragraph`}/> */}
       </Container>
