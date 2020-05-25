@@ -72,6 +72,7 @@ const featuredPosts = [
 
 export default function Blog() {
   const classes = useStyles();
+  const post = require("./posts/post.json");
   return (
     <React.Fragment>
       <CssBaseline />
@@ -90,7 +91,7 @@ export default function Blog() {
           justify="space-evenly"
           alignItems="stretch"
         >
-          {featuredPosts.map((post) => (
+          {post.map((post) => (
             <FeaturedPost post={post}></FeaturedPost>
           ))}
         </Grid>
