@@ -9,9 +9,28 @@ import Header from "../../components/Header";
 import Link from "@material-ui/core/Link";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
-
+import { Zoom } from "react-slideshow-image";
+import "./slide.css";
 // import CardMedia from "@material-ui/core/CardMedia";
 // import Card from "@material-ui/core/Card";
+// const images = [
+//   'images/slide_2.jpg',
+//   'images/slide_3.jpg',
+//   'images/slide_4.jpg',
+//   'images/slide_5.jpg',
+//   'images/slide_6.jpg',
+//   'images/slide_7.jpg'
+// ];
+
+const zoomOutProperties = {
+  duration: 5000,
+  transitionDuration: 500,
+  infinite: true,
+  indicators: true,
+  scale: 0.4,
+  arrows: true,
+  pauseOnHover: true,
+};
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,8 +42,10 @@ const useStyles = makeStyles((theme) => ({
   },
   gridList: {
     width: "80%",
+    margin: "auto",
     [theme.breakpoints.down("xs")]: {
       width: "100%",
+      margin: "auto",
     },
     // height: 450,
   },
@@ -98,8 +119,20 @@ function AlbumItem(props) {
     <React.Fragment>
       <Header name="PHOTOGRAPHY"></Header>
       <Container>
+        <div className="slide-container">
+          <Zoom {...zoomOutProperties}>
+            {images.map((each, index) => (
+              <img
+                key={index}
+                // style={{ width: "80%", margin: "auto" }}
+                className={classes.gridList}
+                src={require(`./images/${each}`)}
+              />
+            ))}
+          </Zoom>
+        </div>
         {!isLoading && images.length === 0 && <h1>No Images Found</h1>}
-        <div className={classes.root}>
+        {/* <div className={classes.root}>
           <GridList className={classes.gridList} cols={getGridListCols()}>
             {images.map((url2, index) => (
               <GridListTile key={index} cols={1}>
@@ -113,7 +146,9 @@ function AlbumItem(props) {
               </GridListTile>
             ))}
           </GridList>
-        </div>
+        </div> */}
+
+        {/* <PhotoSwipe></PhotoSwipe> */}
       </Container>
       <Footer></Footer>
     </React.Fragment>
