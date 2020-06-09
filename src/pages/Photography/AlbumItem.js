@@ -67,8 +67,8 @@ const useStyles = makeStyles((theme) => ({
 function AlbumItem(props) {
   const classes = useStyles();
   const [images, setImages] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
-  // const [term, setTerm] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+  const [term, setTerm] = useState("");
   const imagesURL = [];
 
   
@@ -90,7 +90,7 @@ function AlbumItem(props) {
     //     setIsLoading(false);
     //   })
     //   .catch((err) => console.log(err));
-  },[props.match.url, imagesURL]);
+  },[term]);
   return (
     <React.Fragment>
       <Header name="PHOTOGRAPHY"></Header>

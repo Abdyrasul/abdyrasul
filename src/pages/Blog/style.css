@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Taviraj:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
+
 img[alt="MainImage"] {
   display: block;
   margin-left: auto;
@@ -7,6 +11,13 @@ img[alt="MainImage"] {
   height: auto;
 }
 p {
-  font-family: "Taviraj", serif;
+  /* font-family: "Taviraj", serif; */
+  font-family: 'Nunito', sans-serif;
   font-size: 15pt;
+}
+
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 12pt;
+  }
 }

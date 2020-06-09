@@ -11,6 +11,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Link as RouterLink } from "react-router-dom";
+import "../pages/Blog/style.css"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -19,8 +20,11 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarTitle: {
     flex: 1,
-    fontFamily: "Dancing Script",
+    fontFamily: "Plaster",
     fontSize: 35,
+    [theme.breakpoints.down("xs")]: {
+      fontSize:20
+    },
   },
   toolbarSecondary: {
     justifyContent: "space-between",
