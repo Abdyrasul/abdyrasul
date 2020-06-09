@@ -109,7 +109,7 @@ export default function BlogItem(props) {
           {/* <Typography component="p" variant="body2" className={classes.content}>
             {blogItem.body}
           </Typography> */}
-          <ReactMarkdown source={post} className={blogCSS} />
+          <ReactMarkdown source={post} className="./style.css" />
         </Box>
         {/* <ReactMarkdown source ={`# This is a header\n\nAnd this is a paragraph`}/> */}
       </Container>

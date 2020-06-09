@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
-import GridList from "@material-ui/core/GridList";
-import GridListTile from "@material-ui/core/GridListTile";
-import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
+import withWidth from "@material-ui/core/withWidth";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import Link from "@material-ui/core/Link";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardMedia from "@material-ui/core/CardMedia";
 import { Zoom } from "react-slideshow-image";
 // import "./slide.css";
 // import CardMedia from "@material-ui/core/CardMedia";
@@ -72,29 +67,11 @@ const useStyles = makeStyles((theme) => ({
 function AlbumItem(props) {
   const classes = useStyles();
   const [images, setImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [term, setTerm] = useState("");
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [term, setTerm] = useState("");
   const imagesURL = [];
 
-  const getGridListCols = () => {
-    console.log(`witdh: ${props.width}`);
-    if (isWidthUp("xl", props.width)) {
-      return 5;
-    }
-
-    if (isWidthUp("lg", props.width)) {
-      return 4;
-    }
-
-    if (isWidthUp("md", props.width)) {
-      return 3;
-    }
-    if (isWidthUp("xs", props.width)) {
-      return 2;
-    }
-
-    return 3;
-  };
+  
 
   useEffect(() => {
     let url = props.match.url.split("/")[2];
@@ -113,7 +90,7 @@ function AlbumItem(props) {
     //     setIsLoading(false);
     //   })
     //   .catch((err) => console.log(err));
-  }, [term]);
+  },[props.match.url, imagesURL]);
   return (
     <React.Fragment>
       <Header name="PHOTOGRAPHY"></Header>
@@ -123,6 +100,7 @@ function AlbumItem(props) {
             {images.map((each, index) => (
               <img
                 key={index}
+                alt = "Alternative"
                 // style={{ width: "80%", margin: "auto" }}
                 className={classes.gridList}
                 src={require(`./images/${each}`)}
@@ -130,24 +108,6 @@ function AlbumItem(props) {
             ))}
           </Zoom>
         </div>
-        {!isLoading && images.length === 0 && <h1>No Images Found</h1>}
-        {/* <div className={classes.root}>
-          <GridList className={classes.gridList} cols={getGridListCols()}>
-            {images.map((url2, index) => (
-              <GridListTile key={index} cols={1}>
-                <CardActionArea component={Link} to={`#`}>
-                  <CardMedia
-                    className={classes.media2}
-                    image={require(`./images/${url2}`)}
-                    title="Paella dish"
-                  />
-                </CardActionArea>
-              </GridListTile>
-            ))}
-          </GridList>
-        </div> */}
-
-        {/* <PhotoSwipe></PhotoSwipe> */}
       </Container>
       <Footer></Footer>
     </React.Fragment>

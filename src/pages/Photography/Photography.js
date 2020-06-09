@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const albums = [
   {
+    id:1,
     title: "Ashgabat",
     staticFolder: "ashgabat",
     img:
@@ -45,6 +46,7 @@ const albums = [
     year: 2018,
   },
   {
+    id:2,
     title: "Moda Sahili",
     staticFolder: "moda",
     img: "https://istanbeautiful.com/tr/wp-content/uploads/moda-kadikoy.jpg",
@@ -53,6 +55,7 @@ const albums = [
     year: 2018,
   },
   {
+    id:3,
     title: "Belgrad Ormanı",
     staticFolder: "belgrad",
     img:
@@ -75,7 +78,7 @@ export default function Photography(props) {
         </Typography>
         <Grid container spacing={4} className={classes.root}>
           {albums.map((item) => (
-            <MainPhotoAlbum album={item}></MainPhotoAlbum>
+            <MainPhotoAlbum key={item.id} album={item}></MainPhotoAlbum>
           ))}
         </Grid>
       </div>

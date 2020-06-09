@@ -71,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Portfolio() {
   const classes = useStyles();
-  console.log("Portfolio Syafasinda");
   return (
     <React.Fragment>
       <CssBaseline />
@@ -158,7 +157,7 @@ export default function Portfolio() {
                 letter in the given alphabet.
                 <Link href="https://github.com/Abdyrasul/CompressJavaFX">
                   {" "}
-                  Source Code (GitGub Public Repository){" "}
+                  Source Code (Github Public Repository){" "}
                 </Link>
               </Typography>
               <Box
@@ -174,6 +173,65 @@ export default function Portfolio() {
                 }}
               ></Box>
             </Box>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
+        <ExpansionPanel style={{ backgroundColor: "#F1F2F2" }}>
+          <ExpansionPanelSummary
+            expandIcon={<Brightness2Icon style={{ color: "#2D1457" }} />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography className={classes.heading}>Emotion Analysis using Tensorflow</Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Box flexDirection="column">
+              <Typography>
+              My interest in artificial intelligence and its applications increased from the first year at university. The topic
+of my graduate project thesis was: "Emotion analysis using wearable sensor device in 2D
+Displays versus 3D Virtual Reality environments." The research aims to conduct a comparative
+analysis of emotion recognition in the 2D displays and 3D Virtual Environments.
+              </Typography>
+            </Box>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
+        <ExpansionPanel style={{ backgroundColor: "#F1F2F2" }}>
+          <ExpansionPanelSummary
+            expandIcon={<Brightness2Icon style={{ color: "#2D1457" }} />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography className={classes.heading}>3D Book for kids with augmented reality on Unity.</Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Box flexDirection="column">
+              <Typography>
+              The mobile application was developed for android devices using Unity. 
+              The app uses augmented reality technology to display 3D objects on a book that was designed for kids. 
+              The book includes numbers, colors, and seasons as an educational purpose.
+              <Link href="https://github.com/Abdyrasul/3DBook">
+                  {" "}
+                  Source Code (Github Public Repository){" "}
+                </Link>
+              </Typography>
+            </Box>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
+        <ExpansionPanel style={{ backgroundColor: "#F1F2F2" }}>
+          <ExpansionPanelSummary
+            expandIcon={<Brightness2Icon style={{ color: "#2D1457" }} />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography className={classes.heading}>Other Academic Projects</Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            {/* <Box flexDirection="column"> */}
+            <ul style = {{margin:"0"}}>
+  <li>Football league DB using MS SQL</li>
+  <li>Rental car automation web site using PHP.</li>
+  <li>Export File Helper</li>
+</ul> 
+            {/* </Box> */}
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </Container>
