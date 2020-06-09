@@ -10,7 +10,7 @@ import Link from "@material-ui/core/Link";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
 import { Zoom } from "react-slideshow-image";
-import "./slide.css";
+// import "./slide.css";
 // import CardMedia from "@material-ui/core/CardMedia";
 // import Card from "@material-ui/core/Card";
 // const images = [
@@ -29,7 +29,6 @@ const zoomOutProperties = {
   indicators: true,
   scale: 0.4,
   arrows: true,
-  pauseOnHover: true,
 };
 
 const useStyles = makeStyles((theme) => ({
