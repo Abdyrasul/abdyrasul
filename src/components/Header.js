@@ -11,8 +11,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Link as RouterLink } from "react-router-dom";
-import "../pages/Blog/style.css"
-
+import "../pages/Blog/style.css";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -20,10 +19,10 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarTitle: {
     flex: 1,
-    fontFamily: "Plaster",
+    fontFamily: "Taviraj",
     fontSize: 35,
     [theme.breakpoints.down("xs")]: {
-      fontSize:20
+      fontSize: 20,
     },
   },
   toolbarSecondary: {
@@ -46,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
       // borderBottom: `2px solid ${theme.palette.success.dark}`,
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize:13
+      fontSize: 13,
     },
   },
 
@@ -58,16 +57,16 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.secondary.main,
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize:13
+      fontSize: 13,
     },
   },
-  socialIcons:{
+  socialIcons: {
     [theme.breakpoints.down("xs")]: {
-      fontSize: 17
+      fontSize: 17,
       // backgroundColor:"#FFDFDC",
       // paddingBottom:"30px"
     },
-  }
+  },
 }));
 
 export default function Header(props) {
@@ -94,61 +93,69 @@ export default function Header(props) {
   ];
 
   return (
-    
-      <React.Fragment>
-        <Toolbar className={classes.toolbar}>
-          <a href="https://www.instagram.com/abdiresul/">
-            <InstagramIcon className = {classes.socialIcons} color="primary"></InstagramIcon>
-          </a>
-          <a href="https://www.linkedin.com/in/abdyrasul-oraznyyazov-245933121/">
-            <LinkedInIcon className = {classes.socialIcons} color="primary"></LinkedInIcon>
-          </a>
-          <a href="https://github.com/Abdyrasul/">
-            <GitHubIcon  className = {classes.socialIcons} color="primary"></GitHubIcon>
-          </a>
-          <Typography
-            component="h2"
-            variant="h6"
-            color="inherit"
-            align="center"
-            noWrap
-            className={classes.toolbarTitle}
-          >
-            Abdyrasul
-          </Typography>
-          <IconButton>
-            <SearchIcon />
-          </IconButton>
-        </Toolbar>
-        <Toolbar
-          component="nav"
-          variant="dense"
-          className={classes.toolbarSecondary}
+    <React.Fragment>
+      <Toolbar className={classes.toolbar}>
+        <a href="https://www.instagram.com/abdiresul/">
+          <InstagramIcon
+            className={classes.socialIcons}
+            color="primary"
+          ></InstagramIcon>
+        </a>
+        <a href="https://www.linkedin.com/in/abdyrasul-oraznyyazov-245933121/">
+          <LinkedInIcon
+            className={classes.socialIcons}
+            color="primary"
+          ></LinkedInIcon>
+        </a>
+        <a href="https://github.com/Abdyrasul/">
+          <GitHubIcon
+            className={classes.socialIcons}
+            color="primary"
+          ></GitHubIcon>
+        </a>
+        <Typography
+          component="h2"
+          variant="h6"
+          color="inherit"
+          align="center"
+          noWrap
+          className={classes.toolbarTitle}
         >
-          {sections.map((item) => (
-            <Link
-              component={RouterLink}
-              to={item.url}
-              color="inherit"
-              noWrap
-              key={item.name}
-              variant="button"
-              href="#"
-              underline="none"
-              onClick={() => {
-                setSelectedPage(item.name);
-              }}
-              className={
-                SelectedPage === item.name
-                  ? classes.selectedPage
-                  : classes.toolbarLink
-              }
-            >
-              {item.name}
-            </Link>
-          ))}
-        </Toolbar>
-      </React.Fragment>
+          Abdyrasul
+        </Typography>
+        <IconButton>
+          <SearchIcon />
+        </IconButton>
+      </Toolbar>
+      <Toolbar
+        component="nav"
+        variant="dense"
+        className={classes.toolbarSecondary}
+      >
+        {sections.map((item) => (
+          <Link
+            component={RouterLink}
+            to={item.url}
+            color="inherit"
+            noWrap
+            key={item.name}
+            variant="button"
+            href="#"
+            underline="none"
+            onClick={() => {
+              setSelectedPage(item.name);
+            }}
+            className={
+              SelectedPage === item.name
+                ? classes.selectedPage
+                : classes.toolbarLink
+            }
+          >
+            {item.name}
+          </Link>
+        ))}
+      </Toolbar>
+    </React.Fragment>
   );
 }
 Header.propTypes = {
