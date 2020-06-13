@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   aboutMe: {
@@ -65,7 +66,13 @@ export default function AboutMe() {
               I'm an Istanbul based software developer focused on writing clean,
               elegant, and efficient code.
             </Typography>
-            <Button variant="contained" size="small">
+            <Button
+              variant="contained"
+              size="small"
+              raised
+              component={Link}
+              to="https://drive.google.com/file/d/1SJyUO4ZtojAgBErC-jXYhXEPrN4nN00X/view?usp=sharing"
+            >
               Download CV
             </Button>
           </div>
