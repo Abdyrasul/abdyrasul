@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
+import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   aboutMe: {
@@ -71,10 +72,20 @@ export default function FeaturedWorks() {
             >
               During my student and work experiences, I had an opportunity to
               work on several projects. You can find some of them on the{" "}
-              <Link href="/portfolio" color="secondary">
+              {/* <Link href="/portfolio" color="secondary">
                 {" "}
                 Portfolio{" "}
-              </Link>{" "}
+              </Link>{" "} */}
+              <Link
+                component={RouterLink}
+                to="/portfolio"
+                color="secondary"
+                variant="button"
+                href="#"
+                underline="none"
+              >
+                Portfolio{" "}
+              </Link>
               page.
             </Typography>
           </div>
