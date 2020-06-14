@@ -73,7 +73,7 @@ export default function AboutMe() {
                 download="My_File.pdf"
                 style={{ textDecoration: "none" }}
               >
-                Download Here
+                Download CV Here
               </a>
             </Button>
           </div>
