@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
+    // fontWeight: "fontWeightBold",
   },
   expansionPanel: {
     backgroundColor: "#E5F0FF",
@@ -82,7 +82,9 @@ export default function Portfolio() {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography className={classes.heading}>ZKFlex</Typography>
+            <Typography className={classes.heading} variant="h6" gutterBottom>
+              ZKFlex
+            </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             {/* <img className={classes.image} src="https://images.pexels.com/photos/3137890/pexels-photo-3137890.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></img> */}
@@ -119,7 +121,9 @@ export default function Portfolio() {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <Typography className={classes.heading}>ZKToolbox</Typography>
+            <Typography className={classes.heading} variant="h6" gutterBottom>
+              ZKToolbox
+            </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
@@ -143,7 +147,7 @@ export default function Portfolio() {
             aria-controls="panel3a-content"
             id="panel3a-header"
           >
-            <Typography className={classes.heading}>
+            <Typography className={classes.heading} variant="h6" gutterBottom>
               JavaFX Compress Desktop Application
             </Typography>
           </ExpansionPanelSummary>
@@ -181,15 +185,20 @@ export default function Portfolio() {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography className={classes.heading}>Emotion Analysis using Tensorflow</Typography>
+            <Typography className={classes.heading} variant="h6" gutterBottom>
+              Emotion Analysis using Tensorflow
+            </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Box flexDirection="column">
               <Typography>
-              My interest in artificial intelligence and its applications increased from the first year at university. The topic
-of my graduate project thesis was: "Emotion analysis using wearable sensor device in 2D
-Displays versus 3D Virtual Reality environments." The research aims to conduct a comparative
-analysis of emotion recognition in the 2D displays and 3D Virtual Environments.
+                My interest in artificial intelligence and its applications
+                increased from the first year at university. The topic of my
+                graduate project thesis was: "Emotion analysis using wearable
+                sensor device in 2D Displays versus 3D Virtual Reality
+                environments." The research aims to conduct a comparative
+                analysis of emotion recognition in the 2D displays and 3D
+                Virtual Environments.
               </Typography>
             </Box>
           </ExpansionPanelDetails>
@@ -200,15 +209,18 @@ analysis of emotion recognition in the 2D displays and 3D Virtual Environments.
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography className={classes.heading}>3D Book for kids with augmented reality on Unity.</Typography>
+            <Typography className={classes.heading} variant="h6" gutterBottom>
+              3D Book for kids with augmented reality on Unity.
+            </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Box flexDirection="column">
               <Typography>
-              The mobile application was developed for android devices using Unity. 
-              The app uses augmented reality technology to display 3D objects on a book that was designed for kids. 
-              The book includes numbers, colors, and seasons as an educational purpose.
-              <Link href="https://github.com/Abdyrasul/3DBook">
+                The mobile application was developed for android devices using
+                Unity. The app uses augmented reality technology to display 3D
+                objects on a book that was designed for kids. The book includes
+                numbers, colors, and seasons as an educational purpose.
+                <Link href="https://github.com/Abdyrasul/3DBook">
                   {" "}
                   Source Code (Github Public Repository){" "}
                 </Link>
@@ -222,15 +234,17 @@ analysis of emotion recognition in the 2D displays and 3D Virtual Environments.
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography className={classes.heading}>Other Academic Projects</Typography>
+            <Typography className={classes.heading} variant="h6" gutterBottom>
+              Other Academic Projects
+            </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             {/* <Box flexDirection="column"> */}
-            <ul style = {{margin:"0"}}>
-  <li>Football league DB using MS SQL</li>
-  <li>Rental car automation web site using PHP.</li>
-  <li>Export File Helper</li>
-</ul> 
+            <ul style={{ margin: "0" }}>
+              <li>Football league DB using MS SQL</li>
+              <li>Rental car automation web site using PHP.</li>
+              <li>Export File Helper</li>
+            </ul>
             {/* </Box> */}
           </ExpansionPanelDetails>
         </ExpansionPanel>
