@@ -1,7 +1,7 @@
 {
-  "homepage": "abdyrasul.me",
+  "homepage": "https://abdyrasul.me/",
   "name": "abdiresul",
-  "version": "1.0",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
