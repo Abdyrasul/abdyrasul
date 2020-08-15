@@ -99,7 +99,7 @@ export default function Home() {
           <span
             className={classes.imageSrc}
             style={{
-              backgroundImage: `url(https://images.pexels.com/photos/916335/pexels-photo-916335.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`,
+              backgroundImage: `url(https://images.pexels.com/photos/3735769/pexels-photo-3735769.jpeg?cs=srgb&dl=pexels-polina-tankilevitch-3735769.jpg&fm=jpg)`,
             }}
           />
           <span className={classes.imageBackdrop} />
@@ -110,7 +110,7 @@ export default function Home() {
               color="inherit"
               className={classes.personnelName}
             >
-              Hi, I'M Abdyrasul
+              Hi, I'M Rovshen
             </Typography>
 
             <Typography

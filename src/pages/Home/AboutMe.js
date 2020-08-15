@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
   aboutMeContent: {
     // color: theme.palette.common.black,
     position: "relative",
-    padding: theme.spacing(3),
+    padding: theme.spacing(5),
+    // paddingTop: 5,
     [theme.breakpoints.up("md")]: {
       padding: theme.spacing(6),
       paddingRight: 0,
@@ -37,7 +38,7 @@ export default function AboutMe() {
       <div className={classes.overlay} />
       <Grid container>
         <Grid item md={6}>
-          <div className={classes.aboutMeContent}>
+          <div className={classes.aboutMeContent} style={{ paddingTop: 10 }}>
             <Box display="flex">
               <Typography
                 component="h1"
@@ -60,10 +61,11 @@ export default function AboutMe() {
               variant="body1"
               color="textSecondary"
               paragraph
-              style={{ maxWidth: 250 }}
+              style={{ maxWidth: 480 }}
             >
-              I'm an Istanbul based software developer focused on writing clean,
-              elegant, and efficient code.
+              I am a PhD student. My research interest is the synthesis of photosensitizing compounds and investigation of their photodynamic activity. 
+              My master's thesis was included photophysical and photochemical studies of phthalocyanine compounds.
+               Now I am continuing my research on photosensitive BODIPY-graphene oxide composites as PSs for PDT.
             </Typography>
             <Button variant="contained" size="small">
               Download CV

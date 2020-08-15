@@ -6,6 +6,7 @@ import Blog from "./pages/Blog/Blog";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import AlbumItem from "./pages/Photography/AlbumItem";
 import BlogItem from "./pages/Blog/BlogItem";
+import ResearchItem from "./pages/Research/Research";
 
 
 class App extends React.Component {
@@ -23,6 +24,7 @@ class App extends React.Component {
           <Route path="/photo" exact component={Photography}></Route>
           <Route path="/blogs" component={Blog}></Route>
           <Route path="/portfolio" component={Portfolio}></Route>
+          <Route path="/research" component={ResearchItem}></Route>
           <Route path="/photo/:id" component={AlbumItem}></Route>
           <Route path="/blog/:id" component={BlogItem}></Route>
         </Switch>

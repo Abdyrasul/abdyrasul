@@ -46,10 +46,13 @@ export default function Contact() {
             </Box>
             
             <Typography variant="overline" color="inherit" paragraph style={{maxWidth:400,marginBottom:0}}>
-              +905417350116
+             +90 553 679 10 85
             </Typography>
             <Typography variant="caption" color="inherit" paragraph style={{maxWidth:400}}>
-              resul.cse@gmail.com
+              Work Email: r.atajanov2020@gtu.edu.tr
+            </Typography>
+            <Typography variant="caption" color="inherit" paragraph style={{maxWidth:400}}>
+              Personnel Email: rovshen.atajanov@gmail.com
             </Typography>
           </div>
         </Grid>

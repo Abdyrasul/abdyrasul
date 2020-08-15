@@ -79,17 +79,14 @@ export default function Header(props) {
       url: "/",
     },
     {
+      name: "RESEARCH",
+      url: "/research",
+    },
+    {
       name: "PHOTOGRAPHY",
       url: "/photo",
     },
-    {
-      name: "BLOG",
-      url: "/blogs",
-    },
-    {
-      name: "PORTFOLIO",
-      url: "/portfolio",
-    },
+
   ];
 
   return (
@@ -121,7 +118,7 @@ export default function Header(props) {
           noWrap
           className={classes.toolbarTitle}
         >
-          Abdyrasul
+          Rovshen Atajanov
         </Typography>
         <IconButton>
           <SearchIcon />

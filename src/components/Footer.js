@@ -9,7 +9,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="#">
-        abdirasul.com
+      atajanov.net
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -31,7 +31,7 @@ export default function Footer() {
     <footer className={classes.footer}>
       <Container maxWidth="lg">
         <Typography variant="h6" align="center" gutterBottom>
-          Abdyrasul Oraznyyazov
+          Rovshen Atajanov
         </Typography>
         <Typography
           variant="subtitle1"
