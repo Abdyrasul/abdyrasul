@@ -35,42 +35,42 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const albums = [
-  {
-    id:1,
-    title: "Ashgabat",
-    staticFolder: "ashgabat",
-    img:
-      "https://1.bp.blogspot.com/-KOzmmj2YBtU/XTRhkwi8s3I/AAAAAAAAh8s/maLMA0OMF2sjHJGfWqve7pAS4nwzQi0ewCKgBGAs/s640/Ashgabat-Walking-Tour-98.jpg",
-    description:
-      " A magnificent and clean city with lavish palaces and mosques surrounded by vast expanses of manicured parkland, the city holds the Guinness World Record for having the highest number of marble-clad buildings.",
-    year: 2018,
-  },
-  {
-    id:2,
-    title: "Moda Sahili",
-    staticFolder: "moda",
-    img: "https://istanbeautiful.com/tr/wp-content/uploads/moda-kadikoy.jpg",
-    description:
-      "Moda park is located in the west of Kadıköy on the Anatolian coast, overlooking the Marmara Sea and Prince Islands, it is a famous district with its nature and frequent restaurants.",
-    year: 2018,
-  },
-  {
-    id:3,
-    title: "Belgrad Ormanı",
-    staticFolder: "belgrad",
-    img:
-      "https://img.a24.com.tr/hbrResim/Belgrad-ormani-nerede-nasil-gidilir-9663.jpg",
-    description:
-      "With its recreation areas, aqueducts, natural life and peaceful environment, Belgrad Forest is one of the escape points for Istanbul residents to breathe.",
-    year: 2019,
-  },
+  // {
+  //   id:1,
+  //   title: "Ashgabat",
+  //   staticFolder: "ashgabat",
+  //   img:
+  //     "https://1.bp.blogspot.com/-KOzmmj2YBtU/XTRhkwi8s3I/AAAAAAAAh8s/maLMA0OMF2sjHJGfWqve7pAS4nwzQi0ewCKgBGAs/s640/Ashgabat-Walking-Tour-98.jpg",
+  //   description:
+  //     " A magnificent and clean city with lavish palaces and mosques surrounded by vast expanses of manicured parkland, the city holds the Guinness World Record for having the highest number of marble-clad buildings.",
+  //   year: 2018,
+  // },
+  // {
+  //   id:2,
+  //   title: "Moda Sahili",
+  //   staticFolder: "moda",
+  //   img: "https://istanbeautiful.com/tr/wp-content/uploads/moda-kadikoy.jpg",
+  //   description:
+  //     "Moda park is located in the west of Kadıköy on the Anatolian coast, overlooking the Marmara Sea and Prince Islands, it is a famous district with its nature and frequent restaurants.",
+  //   year: 2018,
+  // },
+  // {
+  //   id:3,
+  //   title: "Belgrad Ormanı",
+  //   staticFolder: "belgrad",
+  //   img:
+  //     "https://img.a24.com.tr/hbrResim/Belgrad-ormani-nerede-nasil-gidilir-9663.jpg",
+  //   description:
+  //     "With its recreation areas, aqueducts, natural life and peaceful environment, Belgrad Forest is one of the escape points for Istanbul residents to breathe.",
+  //   year: 2019,
+  // },
 ];
 export default function Photography(props) {
   const classes = useStyles();
   return (
     <React.Fragment>
       <CssBaseline />
-      <Header name="PHOTOGRAPHY"></Header>
+      <Header name="PHOTOS"></Header>
       <div>
         <Typography align="center" className={classes.header}>
           {" "}

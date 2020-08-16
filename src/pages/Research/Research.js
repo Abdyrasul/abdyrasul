@@ -15,6 +15,10 @@ import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import PropTypes from 'prop-types';
+import Grid from '@material-ui/core/Grid';
+import kapak from './kapak.jpg'
+import myPDF from "./poster_publication.pdf"
+import Button from "@material-ui/core/Button"
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -106,6 +110,21 @@ const useStyles = makeStyles((theme) => ({
       backgroundSize: "100% !important", // Overrides inline-style
     },
   },
+  paper: {
+    padding: theme.spacing(2),
+    margin: 'auto',
+    maxWidth: 'auto',
+  },
+  image: {
+    width: 128,
+    height: 128,
+  },
+  img: {
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%',
+  },
 }));
 
 export default function Research() {
@@ -139,51 +158,44 @@ export default function Research() {
       </Tabs>
 
       <TabPanel value={value} index={0}>
-      <ExpansionPanel style={{ backgroundColor: "#FFFFFF" }}>
-          <ExpansionPanelSummary
-            expandIcon={<Brightness2Icon style={{ color: "#2D1457" }} />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography className={classes.heading}>3D Book for kids with augmented reality on Unity.</Typography>
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            <Box flexDirection="column">
-              <Typography>
-              The mobile application was developed for android devices using Unity. 
-              The app uses augmented reality technology to display 3D objects on a book that was designed for kids. 
-              The book includes numbers, colors, and seasons as an educational purpose.
-              <Link href="https://github.com/Abdyrasul/3DBook">
-                  {" "}
-                  Source Code (Github Public Repository){" "}
-                </Link>
-              </Typography>
-            </Box>
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
+          <Paper className={classes.paper}>
+              <Grid container spacing={2}>
+                  <Grid item item xs={12}> 
+                  <img className={classes.img} alt="complex" src={kapak} />  
+                  </Grid>
+                  <Grid item xs></Grid>
+                  <Grid item item xs={6} >
+                      <Typography variant="h6" gutterBottom align="center">ABSTRACT</Typography>
+                      <Typography variant="subtitle2" align="center">SYNTHESIS AND CHARACTERIZATION OF METAL FREE AND METAL PHTHALOCYANINES BEARING THYMOL MOIETIES DERIVED FROM ANTIMICROBIAL AND ANTIFUNGAL TERPENOIDS</Typography>
+                  <Typography gutterBottom variant="subtitle1">
+                  
+
+Phthalocyanines (Pcs) are tetrapyrrolic macrocycles with 18 delocalized π- electrons and are synthetic analogues of naturally occurring porphyrins. Along with their chemical and physical stability, their architectural flexibility and broad spectroscopic properties attract the interest of chemists, physicists and industrial scientists since the discovery of their synthesis. Modifications in axial or peripheral positions of Pc ring yield wide distribution of physical and chemical characteristics [1].
+Thymol is phenolic monoterpenoid compound obtained from essential oils of Thymus vulgaris, Monarda puctata [2] and various other kinds of plants. It shows wide biological activities against cancerogenous cells [3], microbial diseases [4] and also has been known to exhibit anti-inflammatory [5] and anti-oxidative effects [6].
+In this work, nucleophilic substitution and azo coupling reactions were carried out between thymol and phthalonitrile compounds. Using the starting compounds obtained from these reactions, new metallo- and metal-free Pcs were synthesized in order to investigate their potential applications suitable with their chemical and physical characteristics. Furthermore, photophysical and photochemical properties of some of newly synthesized Pcs were investigated for photodynamic therapy (PDT) studies.
+The structures of new compounds were determined based on the results of spectroscopic methods such as FT-IR, UV-vis, NMR and MALDI TOF MS.
+Throughout this thesis it has been shown that phthalocyanines are among the most versatile and interesting compounds within molecular materials. Although technological applications based on these compounds already exist in the market, the design of phthalocyanines with suitable properties for specific applications will continue to be studied due to the possibilities of improvement and the appearance of new properties and applications of these compounds.
+                </Typography>
+                  </Grid>
+                  <Grid item xs></Grid>
+              </Grid>
+          </Paper>
       </TabPanel>
       <TabPanel value={value} index={1}>
         
       </TabPanel>
       <TabPanel value={value} index={2}>
-      <ExpansionPanel style={{ backgroundColor: "#FFFFFF" }}>
-          <ExpansionPanelSummary
-            expandIcon={<Brightness2Icon style={{ color: "#2D1457" }} />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography className={classes.heading}>Other Academic Projects</Typography>
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            {/* <Box flexDirection="column"> */}
-            <ul style = {{margin:"0"}}>
-  <li>Football league DB using MS SQL</li>
-  <li>Rental car automation web site using PHP.</li>
-  <li>Export File Helper</li>
-</ul> 
-            {/* </Box> */}
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
+            <Typography variant="h6" gutterBottom align="center">Timol sübstitüe oxo köprülü yeni ftalosiyaninlerin sentezi, karakterizasyonu
+ve fotodinamik terapi aktivitelerinin araştırılması</Typography>
+<Button color="secondary" size="small">
+            <a
+                href={myPDF}
+                download="Publication.pdf"
+                style={{ textDecoration: "none" }}
+              >
+               Download Publication
+              </a>
+            </Button>
       </TabPanel>
     </Paper>
         

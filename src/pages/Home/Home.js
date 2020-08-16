@@ -119,12 +119,12 @@ export default function Home() {
               color="inherit"
               className={classes.text}
             >
-              Welcome to my personnel website.
+              Welcome to my personal website.
             </Typography>
           </span>
         </CardMedia>
         <AboutMe></AboutMe>
-        <FeaturedWorks></FeaturedWorks>
+        {/* <FeaturedWorks></FeaturedWorks> */}
         <Contact></Contact>
       </Container>
       <Footer></Footer>

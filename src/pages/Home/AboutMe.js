@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
+import myPDF from "./CV-Atajanov.pdf";
 
 const useStyles = makeStyles((theme) => ({
   aboutMe: {
@@ -68,7 +69,13 @@ export default function AboutMe() {
                Now I am continuing my research on photosensitive BODIPY-graphene oxide composites as PSs for PDT.
             </Typography>
             <Button variant="contained" size="small">
-              Download CV
+            <a
+                href={myPDF}
+                download="CV-Atajanov.pdf"
+                style={{ textDecoration: "none" }}
+              >
+               Download CV
+              </a>
             </Button>
           </div>
         </Grid>

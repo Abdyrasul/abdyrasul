@@ -11,6 +11,8 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Link as RouterLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faResearchgate} from "@fortawesome/free-brands-svg-icons";
 import "../pages/Blog/style.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -19,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarTitle: {
     flex: 1,
-    fontFamily: "Taviraj",
+    fontFamily: "Nunito",
     fontSize: 35,
     [theme.breakpoints.down("xs")]: {
       fontSize: 20,
@@ -41,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     flexShrink: 0,
     "&:hover": {
-      color: theme.palette.secondary.main,
+      color: theme.palette.success,
       // borderBottom: `2px solid ${theme.palette.success.dark}`,
     },
     [theme.breakpoints.down("xs")]: {
@@ -52,9 +54,9 @@ const useStyles = makeStyles((theme) => ({
   selectedPage: {
     padding: theme.spacing(1),
     flexShrink: 0,
-    borderBottom: `2px solid ${theme.palette.secondary.main}`,
+    borderBottom: `2px solid ${theme.palette.secondary.light}`,
     "&:hover": {
-      color: theme.palette.secondary.main,
+      // color: theme.palette.secondary.light,
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: 13,
@@ -83,7 +85,7 @@ export default function Header(props) {
       url: "/research",
     },
     {
-      name: "PHOTOGRAPHY",
+      name: "PHOTOS",
       url: "/photo",
     },
 
@@ -104,12 +106,10 @@ export default function Header(props) {
             color="primary"
           ></LinkedInIcon>
         </a>
-        <a href="https://github.com/Abdyrasul/">
-          <GitHubIcon
-            className={classes.socialIcons}
-            color="primary"
-          ></GitHubIcon>
+        <a href="https://www.linkedin.com/in/abdyrasul-oraznyyazov-245933121/">
+        <FontAwesomeIcon icon={faResearchgate} size="2x"></FontAwesomeIcon>
         </a>
+        
         <Typography
           component="h2"
           variant="h6"
@@ -121,7 +121,7 @@ export default function Header(props) {
           Rovshen Atajanov
         </Typography>
         <IconButton>
-          <SearchIcon />
+          {/* <SearchIcon /> */}
         </IconButton>
       </Toolbar>
       <Toolbar
