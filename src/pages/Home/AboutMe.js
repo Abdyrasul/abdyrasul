@@ -64,17 +64,20 @@ export default function AboutMe() {
               paragraph
               style={{ maxWidth: 480 }}
             >
-              I am a PhD student. My research interest is the synthesis of photosensitizing compounds and investigation of their photodynamic activity. 
-              My master's thesis was included photophysical and photochemical studies of phthalocyanine compounds.
-               Now I am continuing my research on photosensitive BODIPY-graphene oxide composites as PSs for PDT.
+              I am a PhD student. My research interest is the synthesis of
+              photosensitizing compounds and investigation of their photodynamic
+              activity. My master's thesis was included photophysical and
+              photochemical studies of phthalocyanine compounds. Now I am
+              continuing my research on photosensitive BODIPY-graphene oxide
+              composites as PSs for PDT.
             </Typography>
             <Button variant="contained" size="small">
-            <a
+              <a
                 href={myPDF}
                 download="CV-Atajanov.pdf"
                 style={{ textDecoration: "none" }}
               >
-               Download CV
+                Download CV
               </a>
             </Button>
           </div>
