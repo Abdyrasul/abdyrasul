@@ -41,7 +41,8 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
       margin: "auto",
     },
-    // height: 450,
+    objectFit: "contain",
+    height: 550,
   },
   mainImage: {
     // backgroundSize: "cover",
@@ -71,13 +72,12 @@ function AlbumItem(props) {
   const [term, setTerm] = useState("");
   const imagesURL = [];
 
-  
-
   useEffect(() => {
-    let url = props.match.url.split("/")[2];
+    // let url = props.match.url.split("/")[2];
+    let url = "rovshen";
 
-    for (let i = 1; i < 10; i++) {
-      imagesURL.push(`${url}/${i}.JPG`);
+    for (let i = 1; i < 17; i++) {
+      imagesURL.push(`${url}/${i}.jpeg`);
       setImages(imagesURL);
     }
     // fetch(
@@ -90,7 +90,7 @@ function AlbumItem(props) {
     //     setIsLoading(false);
     //   })
     //   .catch((err) => console.log(err));
-  },[term]);
+  }, [term]);
   return (
     <React.Fragment>
       <Header name="PHOTOGRAPHY"></Header>
@@ -100,7 +100,7 @@ function AlbumItem(props) {
             {images.map((each, index) => (
               <img
                 key={index}
-                alt = "Alternative"
+                alt="Alternative"
                 // style={{ width: "80%", margin: "auto" }}
                 className={classes.gridList}
                 src={require(`./images/${each}`)}

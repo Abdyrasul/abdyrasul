@@ -11,8 +11,8 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Link as RouterLink } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faResearchgate} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faResearchgate } from "@fortawesome/free-brands-svg-icons";
 import "../pages/Blog/style.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -88,28 +88,27 @@ export default function Header(props) {
       name: "PHOTOS",
       url: "/photo",
     },
-
   ];
 
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-        <a href="https://www.instagram.com/abdiresul/">
+        <a href="https://instagram.com/rovshen.atajanov/">
           <InstagramIcon
             className={classes.socialIcons}
             color="primary"
           ></InstagramIcon>
         </a>
-        <a href="https://www.linkedin.com/in/abdyrasul-oraznyyazov-245933121/">
+        <a href="https://www.linkedin.com/in/atajanov/">
           <LinkedInIcon
             className={classes.socialIcons}
             color="primary"
           ></LinkedInIcon>
         </a>
-        <a href="https://www.linkedin.com/in/abdyrasul-oraznyyazov-245933121/">
-        <FontAwesomeIcon icon={faResearchgate} size="2x"></FontAwesomeIcon>
+        <a href="https://www.researchgate.net/profile/Rovshen_Atajanov">
+          <FontAwesomeIcon icon={faResearchgate} size="2x"></FontAwesomeIcon>
         </a>
-        
+
         <Typography
           component="h2"
           variant="h6"
@@ -120,9 +119,7 @@ export default function Header(props) {
         >
           Rovshen Atajanov
         </Typography>
-        <IconButton>
-          {/* <SearchIcon /> */}
-        </IconButton>
+        <IconButton>{/* <SearchIcon /> */}</IconButton>
       </Toolbar>
       <Toolbar
         component="nav"
