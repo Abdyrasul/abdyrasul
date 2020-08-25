@@ -66,10 +66,7 @@ export default function AboutMe() {
             >
               I am a PhD student. My research interest is the synthesis of
               photosensitizing compounds and investigation of their photodynamic
-              activity. My master's thesis was included photophysical and
-              photochemical studies of phthalocyanine compounds. Now I am
-              continuing my research on photosensitive BODIPY-graphene oxide
-              composites as PSs for PDT.
+              activity.
             </Typography>
             <Button variant="contained" size="small">
               <a
